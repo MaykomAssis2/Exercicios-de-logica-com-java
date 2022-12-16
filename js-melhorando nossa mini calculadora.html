@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <button class="button" onclick="iniciarCalculo('somar')"> + </button>
+        <button class="button" onclick="iniciarCalculo('subtrair')"> - </button>
+        <button class="button" onclick="iniciarCalculo('multiplicar')"> x </button>
+        <button class="button" onclick="iniciarCalculo('dividir')"> / </button>
+
+    <div id="output"></div>
+
+<script>
+
+       var n2 = prompt('digite outro numero');
+        n2 = parseFloat(n2);
+
+
+        resultado(n2);
+
+      function resultado(mensagem) {
+        var output = document.querySelector('#output');
+        output.innerHTML = mensagem;
+
+      }
+
+
+    function iniciarCalculo(simbolos) {
+
+        var n1 = document.querySelector('#output').textContent;
+        n1 = parseFloat(n1);
+
+        var n2 = prompt('digite outro numero');
+        n2 = parseFloat(n2);
+
+        var msg = Calculo(simbolos, n1, n2);
+
+        resultado(msg);
+
+    }
+
+
+    function Calculo(simbolos, n1, n2) {
+
+        var numerocaculado = null;
+
+        switch(simbolos) {
+
+            case 'somar':
+
+            numerocaculado = n1 + n2;
+            break;
+
+            case 'subtrair':
+            
+            numerocaculado = n1 - n2;
+            break;
+
+            case 'multiplicar':
+            
+            numerocaculado = n1 * n2;
+            break;
+
+            case 'dividir':
+        
+            numerocaculado = n1 / n2;
+            break;
+        }
+
+       return numerocaculado;
+        
+    }
+ </script>
+
+    
+</body>
+</html>       
+        
+        
+        

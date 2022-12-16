@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de programação com java</title>
+</head>
+<body>
+
+    <script>
+         
+         var n = prompt('Digite um numero');
+         n = parseFloat(n);
+
+        indice = 0
+
+        while (indice <= 1000) {  
+            
+            //sempre quando for usar um looping tem que dar uma condição de false pois se não ele entrara em um void que resultará em bugs no browser// 
+
+            document.write(n + ' X ' + indice + '=' (n * indice) + ' <br>'  );
+
+            if (indice % 10 === 0 && indice  > 0) {
+                document.write('<hr>' );
+            }
+
+            indice = indice + 1 
+            
+        }
+
+        document.write('saiu do looping');
+
+    </script>
+    
+</body>
+</html>

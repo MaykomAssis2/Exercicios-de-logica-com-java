@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="mostrarAreaAlert('L, A')">alert</button>
+    <button onclick="mostrarArea('L, A')">mostrar area</button>
+
+    <div id="output"></div>
+    
+    <script>
+
+        function mostrarArea(L, A) {
+
+        var L = prompt('Digite um numero');
+        L = parseFloat(L);
+
+        var A = prompt('digite outro numero');
+        A = parseFloat(A);
+
+        try {
+
+            var msg = calculo(L, A);
+
+        } 
+        catch(e){
+            msg = e;
+        }
+
+        document.querySelector('#output').innerHTML = 'a area total é: ' + msg;
+
+        }
+        
+        function mostrarAreaAlert(l, A) {
+
+        var L = prompt('Digite um numero');
+        L = parseFloat(L);
+
+        var A = prompt('digite outro numero');
+        A = parseFloat(A);
+             
+        try {
+            
+            var msg = calculo(L, A);
+
+        } 
+        catch(e){
+            msg = e;
+        }
+        
+
+        alert('area total é: ' + msg);
+
+
+        }
+
+
+
+        function calculo(L, A) {
+
+            if (L === undefined || A === undefined){
+                throw new Error ('Erro');
+            }
+
+            if (isNaN(L) || isNaN(A) ) {
+                throw new Error('Erro');
+            }
+
+            return L * A;
+
+        }
+        
+
+    </script>
+</body>
+</html>
